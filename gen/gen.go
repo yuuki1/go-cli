@@ -1,4 +1,4 @@
-// Package gen generates github.com/motemen/go-cli.Command from
+// Package gen generates github.com/yuuki1/go-cli.Command from
 // function docs in files specified.
 package gen
 
@@ -16,7 +16,7 @@ const fileFormat = `// auto-generated file
 
 package main
 
-import "github.com/motemen/go-cli"
+import "github.com/yuuk1/go-cli"
 
 func init() {%s}
 `
@@ -52,7 +52,7 @@ Currently, generated files will be like below:
 
 	package main
 
-	import "github.com/motemen/go-cli"
+	import "github.com/yuuki1/go-cli"
 
 	func init() {
 	    cli.Use(

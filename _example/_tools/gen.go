@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/motemen/go-cli/gen"
+	"github.com/yuuki1/go-cli/gen"
 )
 
 // go run _tools/gen.go -out generated.go source.go

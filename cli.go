@@ -1,5 +1,5 @@
 // Package cli is a simple framework for creating CLI apps with commands.
-// Its subpackage github.com/motemen/go-cli/gen provides a way to generate
+// Its subpackage github.com/yuuki1/go-cli/gen provides a way to generate
 // commands from document comments in the code.
 package cli
 

@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/motemen/go-cli"
+	"github.com/yuuki1/go-cli"
 )
 
 func Example() {
