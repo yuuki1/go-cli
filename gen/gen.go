@@ -12,7 +12,8 @@ import (
 	"strings"
 )
 
-const fileFormat = `// auto-generated file
+var (
+	FileFormat = `// auto-generated file
 
 package main
 
@@ -20,8 +21,7 @@ import "github.com/yuuk1/go-cli"
 
 func init() {%s}
 `
-
-const commandFormat = `
+	CommandFormat = `
 	cli.Use(
 		&cli.Command{
 			Name:   %q,
@@ -31,6 +31,7 @@ const commandFormat = `
 		},
 	)
 `
+)
 
 /*
 Generate reads source file for command actions with their usage documentations
@@ -100,11 +101,11 @@ func Generate(w io.Writer, path string, src interface{}) error {
 
 		commandCodes = append(
 			commandCodes,
-			fmt.Sprintf(commandFormat, name, funcDecl.Name.Name, short, long),
+			fmt.Sprintf(CommandFormat, name, funcDecl.Name.Name, short, long),
 		)
 	}
 
-	code := fmt.Sprintf(fileFormat, strings.Join(commandCodes, ""))
+	code := fmt.Sprintf(FileFormat, strings.Join(commandCodes, ""))
 
 	_, err = w.Write([]byte(code))
 	return err
